@@ -14,7 +14,7 @@ stdenv.mkDerivation {
         export ROOT_USER="/project/home/dominique-quevy/workspace"
         export ROOT_PROJECT="$ROOT_USER/flutter_project"
         export LIB_PROJECT="$ROOT_PROJECT/lib"
-        export BUILD_PROJECT="$ROOT_PROJECT/build"
+        export BUILD_PROJECT="$ROOT_PROJECT/build/web"
         export PATH="$ROOT_FLUTTER/bin:$ROOT_DART_SDK/bin:$ROOT_PROJECT:$ROOT_USER:$PATH"
     '';
 }

@@ -6,7 +6,7 @@
   "tasks": {
     "show pathes": {
       "name": "show pathes",
-      "command": "clear && whereis flutter python3 chromium > pathList.txt && echo $PATH > PATH.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $CHROME_EXECUTABLE && echo && python3 --version && echo && echo && echo $ROOT_PROJECT",
+      "command": "clear && whereis flutter python3 chromium > pathList.txt && flutter --version > flutter.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $CHROME_EXECUTABLE && echo && python3 --version && echo && echo && echo $ROOT_PROJECT",
       "runAtStart": true
     },
     "flutter config - flutter doctor": {
@@ -16,17 +16,22 @@
     },
     "nix-collect-garbage - flutter clean": {
       "name": "nix-collect-garbage - flutter clean",
-      "command": "clear && nix-collect-garbage && ls $ROOT_PROJECT && cd $ROOT_PROJECT && flutter clean",
+      "command": "clear && nix-collect-garbage && cd $ROOT_PROJECT && flutter clean",
       "runAtStart": false
     },
     "dart format - flutter analyze": {
       "name": "flutter analyze",
-      "command": "clear && flutter pub get && dart --disable-analytics && cd $LIB_PROJECT && dart format $ROOT_PROJECT/lib --fix --line-length=80 --follow-links --set-exit-if-changed && flutter analyze",
+      "command": "clear && cd $ROOT_PROJECT && flutter pub get && dart --disable-analytics && cd $LIB_PROJECT && dart format $LIB_PROJECT --fix --line-length=80 --follow-links --set-exit-if-changed && flutter analyze",
       "runAtStart": false
     },
     "flutter build web": {
       "name": "flutter build web",
       "command": "clear && cd $LIB_PROJECT && flutter devices && flutter pub get && flutter build web",
+      "runAtStart": false
+    },
+    "dart devtools - flutter run": {
+      "name": "dart devtools",
+      "command": "clear && dart devtools && cd $BUILD_PROJECT && flutter run",
       "runAtStart": false
     },
     "flutter logs": {
@@ -37,11 +42,6 @@
     "flutter create flutter_project - flutter web only": {
       "name": "flutter create flutter_project - flutter web only",
       "command": "clear && flutter create flutter_project --verbose --no-overwrite && rm -rv $ROOT_PROJECT/.idea && rm -rv $ROOT_PROJECT/ios && rm -rv $ROOT_PROJECT/macos && rm -rv $ROOT_PROJECT/windows",
-      "runAtStart": false
-    },
-    "dart devtools": {
-      "name": "dart devtools",
-      "command": "clear && dart devtools",
       "runAtStart": false
     }
   }

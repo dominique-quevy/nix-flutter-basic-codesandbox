@@ -6,6 +6,9 @@ https://codesandbox.io/docs/tutorial/install-system-packages
 - Flutter cli
 https://docs.flutter.dev/reference/flutter-cli
 
+- Dart devtools
+https://docs.flutter.dev/development/tools/devtools/cli
+
 /* ===== */
 
 # Docker Example
