@@ -12,6 +12,7 @@ stdenv.mkDerivation {
         export ROOT_CHROMIUM="/nix/store/1wd0wdakqll127nf87ldbvpxppi7sry5-chromium-111.0.5563.64"
         export CHROME_EXECUTABLE="$ROOT_CHROMIUM/bin/chromium-browser"
         export ROOT_PROJECT="$HOME/workspace/flutter_project"
+        export LIB_PROJECT="$ROOT_PROJECT/lib"
         export PATH="$PWD:$ROOT_FLUTTER/bin:$ROOT_DART_SDK/bin:$CHROME_EXECUTABLE:$ROOT_PROJECT:$PATH"
     '';
 }

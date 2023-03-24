@@ -6,17 +6,17 @@
   "tasks": {
     "flutter analyze": {
       "name": "flutter analyze",
-      "command": "clear && cd $ROOT_PROJECT/lib && flutter analyze",
+      "command": "clear && flutter pub get && dart --disable-analytics && cd $ROOT_PROJECT/lib && dart format $ROOT_PROJECT/lib --fix --line-length=80 --follow-links --set-exit-if-changed && flutter analyze",
+      "runAtStart": false
+    },
+    "flutter build web": {
+      "name": "flutter build web",
+      "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter pub get && flutter build web",
       "runAtStart": false
     },
     "flutter logs": {
       "name": "flutter logs",
       "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter logs",
-      "runAtStart": false
-    },
-    "flutter build web": {
-      "name": "flutter build web",
-      "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter build web",
       "runAtStart": false
     }, 
     "show pathes": {
