@@ -1,3 +1,13 @@
+# basic Flutter web app on CodeSandbox Docker sandbox based on NIX packages
+
+- NIX under CodeSandbox
+https://codesandbox.io/docs/tutorial/install-system-packages
+
+- Flutter cli
+https://docs.flutter.dev/reference/flutter-cli
+
+/* ===== */
+
 # Docker Example
 
 In this example, we show how you can use [Docker with CodeSandbox](https://codesandbox.io/post/introducing-docker-support-in-codesandbox). Check [the Dockerfile](./.codesandbox/Dockerfile) to see how we configure the container of this sandbox. You can simply edit it yourself and the container will rebuild. Make sure to fork the sandbox first by clicking "Fork" in the top left corner.
