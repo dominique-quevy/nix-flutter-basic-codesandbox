@@ -9,6 +9,16 @@
       "command": "clear && cd $ROOT_PROJECT/lib && flutter analyze",
       "runAtStart": false
     },
+    "flutter logs": {
+      "name": "flutter logs",
+      "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter logs",
+      "runAtStart": false
+    },
+    "flutter build web": {
+      "name": "flutter build web",
+      "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter build web",
+      "runAtStart": false
+    }, 
     "show pathes": {
       "name": "show pathes",
       "command": "whereis flutter chromium > pathList.txt && echo $PATH > PATH.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $ROOT_PROJECT && acho && echo $CHROME_EXECUTABLE && echo",
