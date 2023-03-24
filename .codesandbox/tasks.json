@@ -11,32 +11,17 @@
     },
     "show pathes": {
       "name": "show pathes",
-      "command": "clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $ROOT_PROJECT && acho && echo $CHROME_EXECUTABLE && echo",
+      "command": "whereis flutter chromium > pathList.txt && echo $PATH > PATH.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $ROOT_PROJECT && acho && echo $CHROME_EXECUTABLE && echo",
       "runAtStart": false
     },
-    "whereis flutter chromium to pathList.txt": {
-      "name": "whereis flutter chromium to pathList.txt",
-      "command": "whereis flutter chromium > pathList.txt",
-      "runAtStart": true
-    },
-    "flutter config": {
-      "name": "flutter config",
-      "command": "flutter config --clear-features && flutter config --enable-web && flutter config --no-enable-android && flutter config --no-enable-linux-desktop && flutter config --no-analytics && flutter config",
+    "flutter config - flutter doctor": {
+      "name": "flutter config - flutter doctor",
+      "command": "flutter config --clear-features && flutter config --enable-web && flutter config --no-enable-android && flutter config --no-enable-linux-desktop && flutter config --no-analytics && flutter config && flutter doctor",
       "runAtStart": false
     },
-    "flutter doctor": {
-      "name": "flutter doctor",
-      "command": "flutter doctor",
-      "runAtStart": false
-    },
-    "nix-collect-garbage": {
+    "nix-collect-garbage - flutter web only": {
       "name": "nix-collect-garbage",
-      "command": "nix-collect-garbage",
-      "runAtStart": false
-    },
-    "echo PATH to PATH.txt": {
-      "name": "echo PATH to PATH.txt",
-      "command": "echo $PATH > PATH.txt",
+      "command": "nix-collect-garbage && && rm -rv $ROOT_PROJECT/.idea  && rm -rv $ROOT_PROJECT/ios  && rm -rv $ROOT_PROJECT/macos  && rm -rv $ROOT_PROJECT/windows",
       "runAtStart": false
     },
     "flutter create flutter_project": {
