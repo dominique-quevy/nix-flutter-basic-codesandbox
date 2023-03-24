@@ -4,7 +4,7 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "flutter analyze": {
+    "dart format - flutter analyze": {
       "name": "flutter analyze",
       "command": "clear && flutter pub get && dart --disable-analytics && cd $ROOT_PROJECT/lib && dart format $ROOT_PROJECT/lib --fix --line-length=80 --follow-links --set-exit-if-changed && flutter analyze",
       "runAtStart": false
@@ -29,14 +29,14 @@
       "command": "flutter config --clear-features && flutter config --enable-web && flutter config --no-enable-android && flutter config --no-enable-linux-desktop && flutter config --no-analytics && flutter config && flutter doctor",
       "runAtStart": false
     },
-    "nix-collect-garbage - flutter web only": {
-      "name": "nix-collect-garbage",
-      "command": "nix-collect-garbage && && rm -rv $ROOT_PROJECT/.idea  && rm -rv $ROOT_PROJECT/ios  && rm -rv $ROOT_PROJECT/macos  && rm -rv $ROOT_PROJECT/windows",
+    "nix-collect-garbage - flutter clean": {
+      "name": "nix-collect-garbage - flutter clean",
+      "command": "clear && nix-collect-garbage && cd $ROOT_PROJECT && flutter clean",
       "runAtStart": false
     },
-    "flutter create flutter_project": {
-      "name": "flutter create flutter_project",
-      "command": "flutter create flutter_project --verbose --no-overwrite && rm -rv $ROOT_PROJECT/.idea  && rm -rv $ROOT_PROJECT/ios  && rm -rv $ROOT_PROJECT/macos  && rm -rv $ROOT_PROJECT/windows",
+    "flutter create flutter_project - flutter web only": {
+      "name": "flutter create flutter_project - flutter web only",
+      "command": "flutter create flutter_project --verbose --no-overwrite & rm -rv $ROOT_PROJECT/.idea & rm -rv $ROOT_PROJECT/ios & rm -rv $ROOT_PROJECT/macos & rm -rv $ROOT_PROJECT/windows",
       "runAtStart": false
     }
   }       
