@@ -1,2 +1,0 @@
-flutter: /nix/store/gxjjq4mlvcpqaxj3sfvy7gnv2pwqs1ri-flutter-3.3.8/bin/flutter
-chromium: /nix/store/1wd0wdakqll127nf87ldbvpxppi7sry5-chromium-111.0.5563.64/bin/chromium
