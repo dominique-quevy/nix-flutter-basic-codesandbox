@@ -9,7 +9,7 @@
       "command": "clear && flutter pub get && dart --disable-analytics && cd $ROOT_PROJECT/lib && dart format $ROOT_PROJECT/lib --fix --line-length=80 --follow-links --set-exit-if-changed && flutter analyze",
       "runAtStart": false
     },
-    "flutter build web": {
+  "flutter build web": {
       "name": "flutter build web",
       "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter pub get && flutter build web",
       "runAtStart": false
@@ -18,11 +18,11 @@
       "name": "flutter logs",
       "command": "clear && cd $ROOT_PROJECT/lib && flutter devices && flutter logs",
       "runAtStart": false
-    }, 
+    },
     "show pathes": {
       "name": "show pathes",
-      "command": "whereis flutter chromium > pathList.txt && echo $PATH > PATH.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $ROOT_PROJECT && acho && echo $CHROME_EXECUTABLE && echo",
-      "runAtStart": false
+      "command": "whereis flutter chromium > pathList.txt && echo $PATH > PATH.txt && clear && echo $PATH && echo && echo && echo $ROOT_FLUTTER && echo && echo $ROOT_DART_SDK && echo && echo $ROOT_CHROMIUM && echo && echo $ROOT_PROJECT && echo && echo $CHROME_EXECUTABLE && echo",
+      "runAtStart": true
     },
     "flutter config - flutter doctor": {
       "name": "flutter config - flutter doctor",
@@ -39,5 +39,5 @@
       "command": "flutter create flutter_project --verbose --no-overwrite & rm -rv $ROOT_PROJECT/.idea & rm -rv $ROOT_PROJECT/ios & rm -rv $ROOT_PROJECT/macos & rm -rv $ROOT_PROJECT/windows",
       "runAtStart": false
     }
-  }       
+  }
 }
